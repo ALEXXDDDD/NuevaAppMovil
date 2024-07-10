@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:zapateria/Graficos_Reportes/ReporteDatos_Vendidos.dart';
+import 'package:zapateria/Perfil/Perfil.dart';
+import 'package:zapateria/ReporteDatos/ReporteDatos.dart';
 import 'package:zapateria/Informacion/InformacionProducto.dart';
 import 'package:zapateria/Login/Login.dart';
 import 'package:zapateria/Materiales/Materiales.dart';
 import 'package:zapateria/Menu/Menu.dart';
 import 'package:zapateria/Productos/Productos.dart';
 import 'package:zapateria/Reportes%20compras%20y%20solicitudes/Reportes.dart';
+import 'package:zapateria/Vinculacion%20de%20cuenta%20y%20resumen/Resumen_compra_cuenta.dart';
 
 void main() => runApp(const MyApp());
 
@@ -25,7 +27,10 @@ class MyApp extends StatelessWidget {
         '/InformacionProducto': (context) => const InformacionProductoScreen(),
         '/Materiales': (context) => const MaterialesScreen(),
         '/Reportes': (context) => const ReportesScreen(),
-        '/Grafico_Reporte': (context) => const ReporteDatosScreen()
+        '/ReporteDatos': (context) => const ReporteDatosScreen(),
+        '/ResumenCompra': (context) => const ResumenCompraScreen(),
+        '/Reportes': (context) => const ReportesScreen(),
+        '/Perfil': (context) => const PerfilScreen()
       },
     );
   }

@@ -110,7 +110,7 @@ class _ProductScreenState extends State<ProductScreen> {
       imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fco.pinterest.com%2Fledyshero%2Fbotines-negros%2F&psig=AOvVaw3mt9zqzGyAaZvieBlirYaQ&ust=1719590125859000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMilkeuS_IYDFQAAAAAdAAAAABAE',
     ),
     Producto(
-      nombre: 'Zapatos',
+      nombre  : 'Zapatos',
       imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.gettyimages.es%2Ffotos%2Fzapato-de-vestir&psig=AOvVaw15DD0WEcG2OCPBIyRYR_ea&ust=1719590313060000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMj_xaOT_IYDFQAAAAAdAAAAABAE',
     ),
     Producto(

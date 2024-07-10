@@ -1,2 +1,3 @@
-2024/06/28-13:08:37.739 4168 Creating DB C:\Users\Eduardo\AppData\Local\Temp\flutter_tools.613bc66\flutter_tools_chrome_device.c3ec8eb6\Default\shared_proto_db\metadata since it was missing.
-2024/06/28-13:08:37.745 4168 Reusing MANIFEST C:\Users\Eduardo\AppData\Local\Temp\flutter_tools.613bc66\flutter_tools_chrome_device.c3ec8eb6\Default\shared_proto_db\metadata/MANIFEST-000001
+2024/07/05-21:10:29.181 3a98 Reusing MANIFEST C:\Users\Eduardo\AppData\Local\Temp\flutter_tools.bfbb8582\flutter_tools_chrome_device.e29ce6bb\Default\shared_proto_db\metadata/MANIFEST-000001
+2024/07/05-21:10:29.182 3a98 Recovering log #3
+2024/07/05-21:10:29.182 3a98 Reusing old log C:\Users\Eduardo\AppData\Local\Temp\flutter_tools.bfbb8582\flutter_tools_chrome_device.e29ce6bb\Default\shared_proto_db\metadata/000003.log 

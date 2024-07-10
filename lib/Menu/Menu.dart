@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MenuScreen extends StatelessWidget {
-  const MenuScreen({Key? key});
+  const MenuScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,9 @@ class MenuScreen extends StatelessWidget {
                   Row(
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/Perfil');
+                        },
                         child: Icon(Icons.person),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.grey,
@@ -102,7 +104,7 @@ class MenuScreen extends StatelessWidget {
                             },
                             child: Text('Ver Materiales'),
                           ),
-                           SizedBox(height: 20),
+                          SizedBox(height: 20),
                           ListTile(
                             leading: Icon(Icons.person),
                             title: Text(
@@ -120,7 +122,7 @@ class MenuScreen extends StatelessWidget {
                             },
                             child: Text('Ver Reportes'),
                           ),
-                           SizedBox(height: 20),
+                          SizedBox(height: 20),
                           ListTile(
                             leading: Icon(Icons.person),
                             title: Text(
@@ -138,7 +140,7 @@ class MenuScreen extends StatelessWidget {
                             },
                             child: Text('Ver Reportes'),
                           ),
-                           SizedBox(height: 20),
+                          SizedBox(height: 20),
                           ListTile(
                             leading: Icon(Icons.person),
                             title: Text(
@@ -156,7 +158,6 @@ class MenuScreen extends StatelessWidget {
                             },
                             child: Text('Ver Resumen'),
                           ),
-
                         ],
                       ),
                     ),
