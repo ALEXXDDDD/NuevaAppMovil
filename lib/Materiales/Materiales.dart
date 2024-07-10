@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart'; // Añadir este paquete para lanzar URLs
 
 class MaterialesScreen extends StatelessWidget {
   const MaterialesScreen({super.key});
@@ -19,16 +18,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final String backendUrl = 'https://tu-backend.com'; // URL de tu backend
-
-  void _launchURL() async {
-    if (await canLaunch(backendUrl)) {
-      await launch(backendUrl);
-    } else {
-      throw 'No se puede abrir $backendUrl';
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -232,17 +221,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text('AÑADIR PRODUCTO'),
                 ),
               ],
-            ),
-            SizedBox(height: 16),
-            GestureDetector(
-              onTap: _launchURL, // Llama a la función para abrir el backend
-              child: Text(
-                'Visita nuestro backend',
-                style: TextStyle(
-                  color: Colors.blue,
-                  decoration: TextDecoration.underline,
-                ),
-              ),
             ),
           ],
         ),

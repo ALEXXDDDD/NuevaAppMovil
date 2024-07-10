@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 
 class ReporteDatosScreen extends StatelessWidget {
   const ReporteDatosScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,29 +30,25 @@ class _HomePageState extends State<HomePage> {
   }
 
   void fetchComprasYServicios() async {
-    final url =
-        'https://tu-backend.com/api/compras'; // Reemplaza esta URL con la URL real de tu backend
-    try {
-      final response = await http.get(Uri.parse(url));
-      if (response.statusCode == 200) {
-        final List<dynamic> fetchedCompras = json.decode(response.body);
-        setState(() {
-          compras = fetchedCompras
-              .map((compra) => {
-                    'id': compra['id'],
-                    'producto': compra['producto'],
-                    'precio': compra['precio'],
-                    'fecha': compra['fecha'],
-                  })
-              .toList();
-        });
-      } else {
-        throw Exception('Failed to load compras');
-      }
-    } catch (e) {
-      print('Error fetching data: $e');
-      // Manejo de errores: Puedes mostrar un mensaje al usuario o realizar otras acciones
-    }
+    // Ejemplo de datos estáticos, reemplaza esto con tu lógica para llamar a tu backend
+    final fetchedCompras = [
+      {
+        "id": 1,
+        "producto": "Zapato Deportivo",
+        "precio": 50.0,
+        "fecha": "2023-06-01"
+      },
+      {
+        "id": 2,
+        "producto": "Zapato Formal",
+        "precio": 80.0,
+        "fecha": "2023-07-15"
+      },
+    ];
+
+    setState(() {
+      compras = fetchedCompras;
+    });
   }
 
   @override

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 
 class Transaction {
   final String id;
@@ -14,35 +12,26 @@ class Transaction {
     required this.amount,
     required this.date,
   });
-
-  factory Transaction.fromJson(Map<String, dynamic> json) {
-    return Transaction(
-      id: json['id'],
-      description: json['description'],
-      amount: json['amount'].toDouble(),
-      date: DateTime.parse(json['date']),
-    );
-  }
 }
 
 class TransactionService {
-  final String backendUrl = 'https://tu-backend-url.com/api/transactions'; // Reemplaza con tu URL
-
   Future<List<Transaction>> fetchTransactions() async {
-    final response = await http.get(Uri.parse(backendUrl));
-
-    if (response.statusCode == 200) {
-      List jsonResponse = json.decode(response.body);
-      return jsonResponse.map((transaction) => Transaction.fromJson(transaction)).toList();
-    } else {
-      throw Exception('Failed to load transactions');
-    }
+    // Aquí puedes conectar a tu backend para obtener los datos
+    await Future.delayed(Duration(seconds: 2)); // Simular una espera
+    return [
+      Transaction(
+          id: '1', description: 'Compra 1', amount: 20.0, date: DateTime.now()),
+      Transaction(
+          id: '2',
+          description: 'Servicio 1',
+          amount: 50.0,
+          date: DateTime.now()),
+    ];
   }
 }
 
 class ResumenCompraScreen extends StatelessWidget {
   const ResumenCompraScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
