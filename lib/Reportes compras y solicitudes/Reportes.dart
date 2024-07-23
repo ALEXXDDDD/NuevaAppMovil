@@ -5,7 +5,7 @@ class ReportesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Zapatería',
+      title: 'Reporte',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Zapatería'),
+        title: Text('Reporte'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -107,11 +107,6 @@ class _HomePageState extends State<HomePage> {
               decoration: InputDecoration(labelText: 'Cantidad'),
               keyboardType: TextInputType.number,
             ),
-            TextField(
-              controller: _clienteController,
-              decoration:
-                  InputDecoration(labelText: 'Cliente (para solicitudes)'),
-            ),
             Row(
               children: [
                 ElevatedButton(
@@ -119,10 +114,6 @@ class _HomePageState extends State<HomePage> {
                   child: Text('Agregar Compra'),
                 ),
                 SizedBox(width: 10),
-                ElevatedButton(
-                  onPressed: _addSolicitud,
-                  child: Text('Agregar Solicitud'),
-                ),
                 SizedBox(width: 10),
                 ElevatedButton(
                   onPressed: _showReport,
@@ -142,8 +133,7 @@ class _HomePageState extends State<HomePage> {
                     );
                   }).toList(),
                   SizedBox(height: 10),
-                  Text('Solicitudes:',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  Text('', style: TextStyle(fontWeight: FontWeight.bold)),
                   ..._solicitudes.map((solicitud) {
                     return ListTile(
                       title: Text('${solicitud['cliente']}'),

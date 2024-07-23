@@ -82,9 +82,20 @@ class Section extends StatelessWidget {
                 title: Text(
                     itemType == 'compra' ? item['producto'] : item['servicio']),
                 subtitle: Text('Fecha: ${item['fecha']}'),
-                trailing: Text('Precio: \$${item['precio']}'),
+                trailing: Text(
+                  'Precio: \$${item['precio']}',
+                  style: TextStyle(
+                    fontSize:
+                        18, 
+                    fontWeight: FontWeight.bold, 
+                  ),
+                ),
               ))
           .toList(),
     );
   }
+}
+
+void main() {
+  runApp(ReporteDatosScreen());
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zapateria/Menu/Menu.dart';
 
 class PerfilScreen extends StatelessWidget {
   const PerfilScreen({super.key});
@@ -93,6 +94,13 @@ class _UserProfilePageState extends State<UserProfilePage> {
               ElevatedButton(
                 onPressed: _saveProfile,
                 child: Text('Guardar'),
+              ),
+              SizedBox(height: 20.0),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/Menu/Menu');
+                },
+                child: const Text('Ver Menu'),
               ),
             ],
           ),
